@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Job Search</title>
+    <style>
+      body {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+}
+  body::before {
+      content: "Background image from Unsplash";
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.7rem;
+      z-index: 2;
+      right: 10px;
+      bottom: 10px;
+      position: fixed;
+  }
+
+  body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+      background-size: cover;
+      background-attachment: fixed;
+      background-image: url("https://source.unsplash.com/1600x900/?programming");
+  }
+   input {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+     border-radius: 50px;
+     height: 30px;
+     width: 250px;
+     padding-left:20px;
+     border: 0px;
+     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    
+    </style>
+    
   </head>
   <body>
-    <h1>Job Search</h1>
+    <header class="head">
+    <h1 class="title">JOB SCRAPPER</h1>
+    <h2 class="subtitle">Find your job!</h2>
+    </header>
+    <main>
     <form action="/report" method="get">
       <input placeholder="Search for a job" required name="word" />
       <button>Search</button>
     </form>
+    </main>
   </body>
 </html>
