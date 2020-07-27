@@ -2,42 +2,8 @@
 <html>
   <head>
     <title>Job Search</title>
-    <style>
-      section {
-        display : grid;
-        gap : 20px;
-        grid-template-columns: repeat(4, 1fr);
-      }
-       body {
-    font-family: "Open Sans", sans-serif;
-    color: white;
-}
-  body::before {
-      content: "Background image from Unsplash";
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.7rem;
-      z-index: 2;
-      right: 10px;
-      bottom: 10px;
-      position: fixed;
-  }
-
-  body::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -2;
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      overflow: hidden;
-      background-size: cover;
-      background-attachment: fixed;
-      background-image: url("https://source.unsplash.com/1600x900/?programming");
-  }
-    </style>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />       
   </head>
   <body>
     <h1>Search Results</h1>
